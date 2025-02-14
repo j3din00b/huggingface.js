@@ -49,10 +49,13 @@ You can send inference requests to third-party providers with the inference clie
 Currently, we support the following providers:
 - [Fal.ai](https://fal.ai)
 - [Fireworks AI](https://fireworks.ai)
+- [Hyperbolic](https://hyperbolic.xyz)
 - [Nebius](https://studio.nebius.ai)
+- [Novita](https://novita.ai/?utm_source=github_huggingface&utm_medium=github_readme&utm_campaign=link)
 - [Replicate](https://replicate.com)
 - [Sambanova](https://sambanova.ai)
 - [Together](https://together.xyz)
+- [Blackforestlabs](https://blackforestlabs.ai)
 
 To send requests to a third-party provider, you have to pass the `provider` parameter to the inference function. Make sure your request is authenticated with an access token.
 ```ts
@@ -72,6 +75,7 @@ When authenticated with a third-party provider key, the request is made directly
 Only a subset of models are supported when requesting third-party providers. You can check the list of supported models per pipeline tasks here:
 - [Fal.ai supported models](https://huggingface.co/api/partners/fal-ai/models)
 - [Fireworks AI supported models](https://huggingface.co/api/partners/fireworks-ai/models)
+- [Hyperbolic supported models](https://huggingface.co/api/partners/hyperbolic/models)
 - [Nebius supported models](https://huggingface.co/api/partners/nebius/models)
 - [Replicate supported models](https://huggingface.co/api/partners/replicate/models)
 - [Sambanova supported models](https://huggingface.co/api/partners/sambanova/models)
@@ -125,7 +129,7 @@ for await (const output of hf.textGenerationStream({
 
 ### Text Generation (Chat Completion API Compatible)
 
-Using the `chatCompletion` method, you can generate text with models compatible with the OpenAI Chat Completion API. All models served by [TGI](https://api-inference.huggingface.co/framework/text-generation-inference) on Hugging Face support Messages API.
+Using the `chatCompletion` method, you can generate text with models compatible with the OpenAI Chat Completion API. All models served by [TGI](https://huggingface.co/docs/text-generation-inference/) on Hugging Face support Messages API.
 
 [Demo](https://huggingface.co/spaces/huggingfacejs/streaming-chat-completion)
 
